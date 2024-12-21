@@ -1,0 +1,8 @@
+{
+  "appId": "com.cashonize.wallet",
+  "appName": "Cashonize",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}

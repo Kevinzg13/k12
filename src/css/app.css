@@ -1,0 +1,338 @@
+@import './base.css';
+@import 'chota';
+
+:root {
+  --color-primary: #0ac18f;
+  --toggle-height: 1.7rem;
+}
+
+#app {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+/* prevent scoll bar from causing jumps */
+body {
+  padding-left: calc(100vw - 100%);
+}
+body.dark {
+  --bg-color: #050a14;
+  --bg-secondary-color: #131316;
+  --font-color: #f5f5f5;
+  --color-grey: #ccc;
+  --color-darkGrey: #777;
+}
+header {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+nav div {
+  padding: 1rem 1.8rem;
+  cursor: pointer;
+  border-bottom: 2px solid var(--color-lightGrey);
+}
+b {
+  font-weight: 700;
+}
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.primaryButton {
+  background-color: var(--color-primary);
+  color: white;
+}
+.icon {
+  vertical-align: text-bottom;
+}
+.copyIcon {
+  vertical-align: text-bottom;
+  margin-bottom: 1px;
+  margin-left: 5px;
+}
+.copyIcon:hover {
+  cursor: pointer;
+}
+.depositAddr,
+.tokenId {
+  overflow-wrap: anywhere;
+  color: var(--color-grey);
+}
+.sendAmountGroup {
+  display: flex;
+  margin-top: 8px;
+}
+.sendCurrencyInput {
+  position: relative;
+  width: 50%;
+  margin-left: 5px;
+}
+.fillInMaxBch {
+  margin-left: 5px;
+}
+.input-icon {
+  position: absolute;
+  display: block;
+  transform: translateY(-50%);
+  top: 50%;
+  pointer-events: none;
+  width: 55px;
+  text-align: center;
+  font-style: normal;
+  right: 0;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+.item {
+  margin: 10px;
+}
+.tokenInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.tokenBaseInfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.tokenIcon {
+  margin-right: 10px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.boxStarIcon {
+  align-self: flex-start;
+  cursor: pointer;
+  width: 30px;
+  height:30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.tokenBaseInfo1 {
+  width: 370px;
+  display: block;
+}
+.tokenAmount {
+  margin-left: 30px;
+}
+.addressInputFtSend {
+  margin-right: 14px;
+  width: 50%;
+}
+.actionBar {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.inputGroup {
+  margin: 0 0 10px;
+  display: flex;
+}
+.actionBar span {
+  margin: 0 20px;
+  cursor: pointer;
+}
+.actionBar :first-of-type {
+  margin-left: 0;
+}
+.sendTokenAmount {
+  display: flex;
+  width: 50%;
+}
+.showChildNfts {
+  cursor: pointer;
+  margin-left: 35px;
+}
+select, summary {
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+/* offset chota styling for quasar notify plugin */
+.row {
+  margin: auto;
+  margin-right: auto !important;
+}
+.col {
+  margin: 0;
+}
+@media screen and (max-width: 599px) {
+  .col {
+    flex: none;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  #app {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    padding: 0 2rem;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .tokenBaseInfo {
+    display: block;
+  }
+  .tokenBaseInfo1 {
+    width: 100%;
+  }
+  .tokenAmount {
+    margin-left: 0;
+  }
+  .showChildNfts {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .tabs div {
+    padding: 1rem;
+  }
+  .sendCurrencyInput {
+    position: relative;
+    width: 140px;
+    margin-left: 5px;
+  }
+  .fillInMaxBch {
+    padding: 1rem 1.5rem;
+  }
+  .actionBar span {
+    margin: 0 10px;
+  }
+  .inputGroup {
+    display: block;
+  }
+  .addressInputFtSend {
+    width: 100%;
+  }
+  .sendTokenAmount {
+    margin-top: 4px;
+    width: 100%;
+  }
+}
+.q-dialog__backdrop {
+  backdrop-filter: blur(24px);
+  background-color: transparent;
+  pointer-events: all !important;
+}
+.q-btn--round {
+  background: none;
+}
+
+/* change look of scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
+
+/*
+ * Common CashConnect Classes
+ */
+
+.cc-modal {
+  background: var(--bg-color);
+}
+
+.cc-modal-fieldset {
+  width: 510px;
+  max-width: 100%;
+  overflow-y: scroll;
+  max-height: 90vh;
+  background: var(--bg-color);
+}
+
+.cc-modal-fieldset-legend {
+  font-size: larger;
+}
+
+.cc-modal-fieldset ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cc-modal-details {
+  font-size: smaller;
+}
+
+.cc-modal-section {
+  margin-bottom: 1em;
+}
+
+.cc-modal-heading {
+  font-weight: bold;
+}
+
+.cc-modal-bottom-buttons {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.cc-modal-button {
+  width: 120px;
+}
+
+.cc-data-table {
+  font-size: smaller;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.cc-data-table tbody th {
+  font-weight: bold;
+}
+.cc-data-table tbody th,
+.cc-data-table tbody td {
+  padding: 0.3em;
+  padding-left: 0em;
+}
+.cc-data-table .satoshis {
+  text-align: right;
+}
+
+.cc-data-table .tx-data-table {
+  margin-left: 15px;
+}
+.cc-data-table .tx-data-table td {
+  padding: 0;
+}
+
+.cc-pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.6em;
+}
