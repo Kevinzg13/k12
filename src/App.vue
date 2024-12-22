@@ -12,7 +12,7 @@
           transition-hide="rotate"
         >
           <q-list style="min-width: 100px">
-            <q-item clickable href="/">
+            <q-item clickable href="/casa">
               <q-item-section>home</q-item-section>
             </q-item>
             <q-item clickable href="/Wallet">
@@ -31,7 +31,7 @@
       </q-avatar>
 
       <q-toolbar-title>Investment BCH</q-toolbar-title>
-      
+
 
       <q-btn flat round dense label="wallet" icon="wallet" clickable href="/wallet"/>
     </q-toolbar>

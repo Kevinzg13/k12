@@ -3,7 +3,7 @@ import { RouteRecordRaw } from 'vue-router';
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import('../pages/CasaView.vue'),
+    component: () => import('pages/WalletPage.vue'),
     props: route => ({ uri: route.query.uri })
   },
 
@@ -12,8 +12,8 @@ const routes: RouteRecordRaw[] = [
     component: () => import('pages/ErrorNotFound.vue'),
   },
   {
-    path: '/wallet',
-    component: () => import('pages/WalletPage.vue'),
+    path: '/casa',
+    component: () => import('../pages/CasaView.vue'),
   },
 ];
 
